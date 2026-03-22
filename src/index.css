@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #050714; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(#7c3aed, #db2777); border-radius: 99px; }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #06b6d4, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(168,85,247,0.15);
+  }
+  .glass-light {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(168,85,247,0.2);
+  }
+  .glow-violet { box-shadow: 0 0 30px rgba(124,58,237,0.3); }
+  .glow-pink { box-shadow: 0 0 30px rgba(236,72,153,0.3); }
+  .neon-border { border: 1px solid rgba(168,85,247,0.3); }
+}
+
+/* Light mode overrides */
+.light body { background: #f0f0ff; }
