@@ -18,7 +18,7 @@ const PROJECTS = [
     emoji: '🧋',
     color: 'from-amber-400 to-orange-500',
     github: 'https://github.com/KuyaJ2015/MilkTea-Landing-Page',
-    demo: 'https://github.com/KuyaJ2015/MilkTea-Landing-Page',
+    demo: 'https://milk-tea-landing-page.vercel.app/',
   },
 ]
 
