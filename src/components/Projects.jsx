@@ -3,42 +3,6 @@ import { useInView } from '../hooks/useInView'
 
 const PROJECTS = [
   {
-    title: 'Digital Clock',
-    desc: 'A real-time digital clock using JavaScript\'s Date object and DOM manipulation. Updates every second with hours, minutes and seconds.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    emoji: '🕐',
-    color: 'from-violet-600 to-blue-600',
-    github: 'https://github.com/KuyaJ2015',
-    demo: '#',
-  },
-  {
-    title: 'Coffee Shop Landing Page',
-    desc: 'Visually appealing landing page for a coffee shop with featured products, responsive layout, and smooth call-to-action sections.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    emoji: '☕',
-    color: 'from-amber-600 to-orange-600',
-    github: 'https://github.com/KuyaJ2015',
-    demo: '#',
-  },
-  {
-    title: 'Countdown Timer',
-    desc: 'Functional countdown timer using setInterval and the Date API. Displays days, hours, minutes, and seconds remaining.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    emoji: '⏱️',
-    color: 'from-emerald-600 to-teal-600',
-    github: 'https://github.com/KuyaJ2015',
-    demo: '#',
-  },
-  {
-    title: 'JoyTube',
-    desc: 'Custom video-browsing web app inspired by YouTube\'s UI. Practices APIs, dynamic content rendering, and responsive layouts.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    emoji: '▶️',
-    color: 'from-red-600 to-pink-600',
-    github: 'https://github.com/KuyaJ2015',
-    demo: '#',
-  },
-  {
     title: 'SOUNDSTACK',
     desc: 'Drag & drop music queue app with YouTube video support built with React and Vite. Features playlist management and live YouTube embedding.',
     tags: ['React', 'Vite', 'JavaScript'],
@@ -46,15 +10,6 @@ const PROJECTS = [
     color: 'from-violet-600 to-pink-600',
     github: 'https://github.com/KuyaJ2015/soundstack',
     demo: 'https://soundstack-three.vercel.app/',
-  },
-  {
-    title: 'Portfolio Website',
-    desc: 'This portfolio! Built with React, Vite, and Tailwind CSS. Features dark/light mode, space animations, and fully responsive design.',
-    tags: ['React', 'Tailwind', 'Vite'],
-    emoji: '🚀',
-    color: 'from-pink-600 to-violet-600',
-    github: 'https://github.com/KuyaJ2015/jmv-portfolio',
-    demo: 'https://jmv-portfolio-one.vercel.app',
   },
 ]
 
