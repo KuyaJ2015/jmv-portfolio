@@ -11,6 +11,15 @@ const PROJECTS = [
     github: 'https://github.com/KuyaJ2015/soundstack',
     demo: 'https://soundstack-three.vercel.app/',
   },
+  {
+    title: 'SipSip Milk Tea',
+    desc: 'A cheerful milk tea landing page for a student-friendly startup. Features an interactive order system with real-time ₱ total, menu filtering, and promos section.',
+    tags: ['React', 'Vite', 'Tailwind CSS'],
+    emoji: '🧋',
+    color: 'from-amber-400 to-orange-500',
+    github: 'https://github.com/KuyaJ2015/MilkTea-Landing-Page',
+    demo: 'https://github.com/KuyaJ2015/MilkTea-Landing-Page',
+  },
 ]
 
 function ProjectCard({ project, dark, index }) {
