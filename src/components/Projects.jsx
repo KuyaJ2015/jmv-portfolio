@@ -27,7 +27,7 @@ const PROJECTS = [
     emoji: '🏠',
     color: 'from-blue-700 to-blue-900',
     github: 'https://github.com/KuyaJ2015/Property-list-portal',
-    demo: 'https://github.com/KuyaJ2015/Property-list-portal',
+    demo: 'https://property-list-portal.vercel.app/',
   },
 ]
 
