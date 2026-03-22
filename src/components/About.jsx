@@ -13,7 +13,7 @@ export default function About({ dark }) {
   const card = `rounded-2xl p-6 transition-all duration-300 ${dark ? 'glass hover:border-violet-500/40' : 'glass-light hover:border-violet-400/50 shadow-lg'}`
 
   return (
-    <section id="about" ref={ref} className="relative min-h-screen flex items-center py-24 px-6 md:px-20 z-10">
+    <section id="about" ref={ref} className="relative min-h-screen flex items-center py-24 px-5 sm:px-8 md:px-20 z-10">
       <div className="max-w-6xl mx-auto w-full">
 
         {/* Header */}
@@ -30,7 +30,7 @@ export default function About({ dark }) {
           <div className={`transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
 
             {/* Avatar placeholder */}
-            <div className="relative mx-auto w-64 h-64 mb-10">
+            <div className="relative mx-auto w-48 h-48 sm:w-64 sm:h-64 mb-10">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-violet-600 to-pink-600 flex items-center justify-center text-8xl shadow-2xl shadow-violet-500/30 animate-float">
                 🧑‍💻
               </div>

@@ -61,7 +61,7 @@ export default function Skills({ dark }) {
   const filtered = activeTab === 'All' ? ALL_SKILLS : ALL_SKILLS.filter(s => s.cat === activeTab)
 
   return (
-    <section id="skills" ref={ref} className="relative py-24 px-6 md:px-20 z-10">
+    <section id="skills" ref={ref} className="relative py-24 px-5 sm:px-8 md:px-20 z-10">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -74,7 +74,7 @@ export default function Skills({ dark }) {
 
         {/* Filter Tabs */}
         <div className={`flex justify-center mb-10 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className={`flex gap-1 p-1.5 rounded-full ${dark ? 'bg-white/5 border border-white/10' : 'bg-gray-100 border border-gray-200'}`}>
+          <div className={`flex flex-wrap justify-center gap-1 p-1.5 rounded-2xl ${dark ? 'bg-white/5 border border-white/10' : 'bg-gray-100 border border-gray-200'}`}>
             {TABS.map(tab => (
               <button
                 key={tab}

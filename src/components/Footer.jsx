@@ -1,6 +1,6 @@
 export default function Footer({ dark }) {
   return (
-    <footer className={`relative z-10 border-t py-8 px-6 md:px-20
+    <footer className={`relative z-10 border-t py-8 px-5 sm:px-8 md:px-20
       ${dark ? 'border-white/8 bg-black/20' : 'border-gray-200 bg-white/40'}`}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
 

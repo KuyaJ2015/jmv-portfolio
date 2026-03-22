@@ -131,7 +131,7 @@ export default function Projects({ dark }) {
   const { ref, visible } = useInView(0.1)
 
   return (
-    <section id="projects" ref={ref} className="relative py-24 px-6 md:px-20 z-10">
+    <section id="projects" ref={ref} className="relative py-24 px-5 sm:px-8 md:px-20 z-10">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

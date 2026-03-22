@@ -20,7 +20,7 @@ export default function Hero({ dark }) {
   }, [charIdx, deleting, roleIdx])
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 z-10">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center px-5 sm:px-8 z-10">
 
       {/* Glow orbs */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-violet-600/10 blur-3xl pointer-events-none animate-pulse-slow" />

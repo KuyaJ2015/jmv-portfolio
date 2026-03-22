@@ -22,7 +22,7 @@ export default function Contact({ dark }) {
     }`
 
   return (
-    <section id="contact" ref={ref} className="relative py-24 px-6 md:px-20 z-10">
+    <section id="contact" ref={ref} className="relative py-24 px-5 sm:px-8 md:px-20 z-10">
 
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 via-transparent to-pink-600/5 pointer-events-none" />
@@ -73,11 +73,11 @@ export default function Contact({ dark }) {
           <form onSubmit={submit}
             className={`transition-all duration-700 delay-300 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
 
-            <div className="grid grid-cols-2 gap-3 mb-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
               <input name="firstName" value={form.firstName} onChange={handle} placeholder="First Name" required className={inputCls} />
               <input name="lastName" value={form.lastName} onChange={handle} placeholder="Last Name" required className={inputCls} />
             </div>
-            <div className="grid grid-cols-2 gap-3 mb-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
               <input name="email" type="email" value={form.email} onChange={handle} placeholder="Email Address" required className={inputCls} />
               <input name="phone" value={form.phone} onChange={handle} placeholder="Phone No." className={inputCls} />
             </div>
