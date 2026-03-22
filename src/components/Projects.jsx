@@ -20,6 +20,15 @@ const PROJECTS = [
     github: 'https://github.com/KuyaJ2015/MilkTea-Landing-Page',
     demo: 'https://milk-tea-landing-page.vercel.app/',
   },
+  {
+    title: 'EstatePro',
+    desc: 'A professional property listing portal for Philippine house & lot listings. Features a property submission form, featured listings, testimonials, and contact support.',
+    tags: ['React', 'Vite', 'Tailwind CSS'],
+    emoji: '🏠',
+    color: 'from-blue-700 to-blue-900',
+    github: 'https://github.com/KuyaJ2015/Property-list-portal',
+    demo: 'https://github.com/KuyaJ2015/Property-list-portal',
+  },
 ]
 
 function ProjectCard({ project, dark, index }) {
