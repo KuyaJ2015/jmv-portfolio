@@ -45,7 +45,7 @@ const PROJECTS = [
     emoji: '🎵',
     color: 'from-violet-600 to-pink-600',
     github: 'https://github.com/KuyaJ2015/soundstack',
-    demo: '#',
+    demo: 'https://soundstack-three.vercel.app/',
   },
   {
     title: 'Portfolio Website',
@@ -53,8 +53,8 @@ const PROJECTS = [
     tags: ['React', 'Tailwind', 'Vite'],
     emoji: '🚀',
     color: 'from-pink-600 to-violet-600',
-    github: 'https://github.com/KuyaJ2015',
-    demo: '#',
+    github: 'https://github.com/KuyaJ2015/jmv-portfolio',
+    demo: 'https://jmv-portfolio-one.vercel.app',
   },
 ]
 
