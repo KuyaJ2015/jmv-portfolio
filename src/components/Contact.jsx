@@ -19,7 +19,7 @@ export default function Contact({ dark }) {
 
     emailjs.send(
       'service_p2c94jl',
-      'template_6104kbl',
+      'template_7mtyu5s',
       {
         name: `${form.firstName} ${form.lastName}`,
         email: form.email,
