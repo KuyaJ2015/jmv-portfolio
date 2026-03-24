@@ -1,18 +1,44 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import { useInView } from '../hooks/useInView'
 
 export default function Contact({ dark }) {
   const { ref, visible } = useInView(0.2)
+  const formRef = useRef()
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
   const submit = e => {
     e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 3500)
-    setForm({ firstName: '', lastName: '', email: '', phone: '', message: '' })
+    setSending(true)
+    setError(false)
+
+    emailjs.send(
+      'service_9polsuc',
+      'template_6104kbl',
+      {
+        name: `${form.firstName} ${form.lastName}`,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+      },
+      'QEqCR2LSx78E80ayb'
+    )
+    .then(() => {
+      setSent(true)
+      setSending(false)
+      setForm({ firstName: '', lastName: '', email: '', phone: '', message: '' })
+      setTimeout(() => setSent(false), 3500)
+    })
+    .catch(() => {
+      setSending(false)
+      setError(true)
+      setTimeout(() => setError(false), 3500)
+    })
   }
 
   const inputCls = `w-full rounded-xl px-5 py-3.5 text-sm outline-none border transition-all duration-200
@@ -24,12 +50,10 @@ export default function Contact({ dark }) {
   return (
     <section id="contact" ref={ref} className="relative py-24 px-5 sm:px-8 md:px-20 z-10">
 
-      {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 via-transparent to-pink-600/5 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto">
 
-        {/* Header */}
         <div className={`text-center mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-violet-400 text-sm font-600 tracking-widest uppercase mb-3">Say Hello</p>
           <h2 className={`text-4xl md:text-5xl font-800 ${dark ? 'text-white' : 'text-gray-900'}`}>
@@ -70,7 +94,7 @@ export default function Contact({ dark }) {
           </div>
 
           {/* Right — Form */}
-          <form onSubmit={submit}
+          <form ref={formRef} onSubmit={submit}
             className={`transition-all duration-700 delay-300 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
@@ -84,13 +108,15 @@ export default function Contact({ dark }) {
             <textarea name="message" value={form.message} onChange={handle} placeholder="Message" required rows={6}
               className={`${inputCls} resize-none mb-4`} />
 
-            <button type="submit"
+            <button type="submit" disabled={sending}
               className={`w-full py-4 rounded-xl font-700 text-sm text-white transition-all duration-300 hover:-translate-y-0.5
                 ${sent
                   ? 'bg-gradient-to-r from-green-500 to-emerald-600 shadow-lg shadow-green-500/30'
+                  : error
+                  ? 'bg-gradient-to-r from-red-500 to-red-600 shadow-lg shadow-red-500/30'
                   : 'bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50'
                 }`}>
-              {sent ? '✓ Message Sent! I\'ll get back to you soon.' : 'Send Message'}
+              {sent ? '✓ Message Sent! I\'ll get back to you soon.' : sending ? 'Sending...' : error ? '✗ Failed to send. Try again.' : 'Send Message'}
             </button>
           </form>
         </div>
